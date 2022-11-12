@@ -58,10 +58,14 @@ class BooksController < ApplicationController
       end
     end
 
-    new_available_copies = CopyBook.where('deactived_copy = 0 and copy_status=0 and books_id=?',book_id).count
-    available_copies_book = Book.find(@book.id)
-    available_copies_book.copies = new_available_copies
-    available_copies_book.save
+    if !book_id.blank?
+
+      new_available_copies = CopyBook.where('deactived_copy = 0 and copy_status=0 and books_id=?',book_id).count
+      available_copies_book = Book.find(@book.id)
+      available_copies_book.copies = new_available_copies
+      available_copies_book.save
+      
+    end
 
     redirect_to '/', notice: "Book created"
 

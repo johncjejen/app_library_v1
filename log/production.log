@@ -1,0 +1,24 @@
+I, [2022-11-12T13:57:54.580519 #22017]  INFO -- : [b6dd19c2-9743-48c0-bc44-dbe8164d5736] Started GET "/" for 127.0.0.1 at 2022-11-12 13:57:54 -0500
+I, [2022-11-12T13:57:54.583032 #22017]  INFO -- : [b6dd19c2-9743-48c0-bc44-dbe8164d5736] Processing by BooksController#home as HTML
+I, [2022-11-12T13:57:54.593280 #22017]  INFO -- : [b6dd19c2-9743-48c0-bc44-dbe8164d5736] Completed 500 Internal Server Error in 10ms (Allocations: 1612)
+F, [2022-11-12T13:57:54.594919 #22017] FATAL -- : [b6dd19c2-9743-48c0-bc44-dbe8164d5736]   
+[b6dd19c2-9743-48c0-bc44-dbe8164d5736] ActiveRecord::DatabaseConnectionError (There is an issue connecting to your database with your username/password, username: myapp.
+
+Please check your database configuration to ensure the username/password are valid.
+):
+[b6dd19c2-9743-48c0-bc44-dbe8164d5736]   
+[b6dd19c2-9743-48c0-bc44-dbe8164d5736] app/controllers/books_controller.rb:7:in `home'
+I, [2022-11-12T13:58:01.446813 #22017]  INFO -- : [b20a40e7-4751-4f43-87da-28db424fe308] Started GET "/" for 127.0.0.1 at 2022-11-12 13:58:01 -0500
+I, [2022-11-12T13:58:01.448075 #22017]  INFO -- : [b20a40e7-4751-4f43-87da-28db424fe308] Processing by BooksController#home as HTML
+I, [2022-11-12T13:58:01.452310 #22017]  INFO -- : [b20a40e7-4751-4f43-87da-28db424fe308] Completed 500 Internal Server Error in 4ms (Allocations: 969)
+F, [2022-11-12T13:58:01.453711 #22017] FATAL -- : [b20a40e7-4751-4f43-87da-28db424fe308]   
+[b20a40e7-4751-4f43-87da-28db424fe308] ActiveRecord::DatabaseConnectionError (There is an issue connecting to your database with your username/password, username: myapp.
+
+Please check your database configuration to ensure the username/password are valid.
+):
+[b20a40e7-4751-4f43-87da-28db424fe308]   
+[b20a40e7-4751-4f43-87da-28db424fe308] app/controllers/books_controller.rb:7:in `home'
+I, [2022-11-12T13:58:01.531634 #22017]  INFO -- : [398ea10f-2675-42f9-9bb8-318867641a36] Started GET "/favicon.ico" for 127.0.0.1 at 2022-11-12 13:58:01 -0500
+F, [2022-11-12T13:58:01.532787 #22017] FATAL -- : [398ea10f-2675-42f9-9bb8-318867641a36]   
+[398ea10f-2675-42f9-9bb8-318867641a36] ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+[398ea10f-2675-42f9-9bb8-318867641a36]   

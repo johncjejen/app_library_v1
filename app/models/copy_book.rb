@@ -33,7 +33,7 @@ class CopyBook < ApplicationRecord
     .joins('inner join users on users.id = borrow_books.user_id')
     .where('copy_books.deactived_copy = 0 and copy_books.books_id =?',book_id)
     .where('borrow_books.copy_number =?',copy_number)
-    .group('borrow_books.id')
+    .group('borrow_books.id, books.id, users.email')
     .order('borrow_books.id desc')
   end
 
