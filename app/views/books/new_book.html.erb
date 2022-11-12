@@ -30,13 +30,15 @@
             
             <div id="templatemo_content">
                 <div id="templatemo_content_new">
-                    <h2 class="h2_class">Create book massive (files .csv)</h2>
+                    <div class="title_center">
+                        <h2 class="h2_class">Create books Csv</h2>
+                    </div>
                     <div class="content_new">
                         <%= form_tag({:controller => "books", :action => "create_book_csv"},:method => "post", :multipart => true, :class =>'') do %> 
                             <table>
                                     <tr></tr>
                                     <tr></tr>
-                                    <tr> <input style="border-radius: 5px;" type="file" required name="file_csv" width="300" class="form-control" accept=".csv" ></tr>
+                                    <tr> <input style="border-radius: 5px;" type="file" required name="file_csv" width="300" class="form-control" accept=".csv" > (files .csv)</tr>
                                     <tr> <p><input type="submit" id="create_btn"  value="Upload" ></p></tr>
                                     <%= flash[:notice] %>
                             </table>
@@ -44,7 +46,7 @@
                     
                         <%= form_tag({:controller => "books", :action => "create_book"},:method => "post", :multipart => true, :class =>'') do %>
                             <table>
-                                <tr><h2 class="h2_class">Create book one by one</h2></tr>
+                                <tr><div class="title_center"><h2 class="h2_class">Create book</h2></div></tr>
                                 <tr></tr>
                                 <tr>
                                     <td id="font_create">Title</td>
@@ -73,7 +75,7 @@
                             </table>
                             <p>
                                 <input type="submit"  value="Create" id="create_btn" >
-                                <a href="/" id="back_btn" style="text-decoration:none; text-align:center">Back</a>
+                                <a href="/" style="text-decoration:none;"><button id="back_btn_new">Back</button></a>
                             </p>
                         <%end%>
                     </div>
@@ -81,8 +83,8 @@
             </div>
             
             <div id="templatemo_footer">
-                <a href="subpage.html">Development on Ruby on Rails</a> | 
-                Copyright © 2022 <a href="#"><strong>John Jejen</strong></a> 
+                <a href="/">Development on Ruby on Rails</a> | 
+                Copyright © 2022 <a href="https://linkedin.com/in/ing-john-carlos-jejen-corredor/"><strong>John Jejen</strong></a> 
             </div> 
         </div>
 	</body>

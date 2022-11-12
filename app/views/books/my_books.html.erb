@@ -30,7 +30,9 @@
               <h1>My books</h1>
             <div id="templatemo_content">
                 <div id="templatemo_content_right">
-                    <h2 class="h2_class"><%= flash[:notice] %><h2>
+                     <div class="subtitle_center">
+                        <h2 class="h2_class"><%= flash[:notice] %><h2>
+                    </div>
                     <% if !@my_books.blank? %>
                         <% @my_books.each do |my_book| %>
                             <div class="templatemo_product_box_history">
@@ -60,8 +62,8 @@
 
             <div id="templatemo_footer">
             
-                <a href="subpage.html">Development on Ruby on Rails</a> | 
-                Copyright © 2022 <a href="#"><strong>John Jejen</strong></a> 
+                <a href="/">Development on Ruby on Rails</a> | 
+                Copyright © 2022 <a href="https://linkedin.com/in/ing-john-carlos-jejen-corredor/"><strong>John Jejen</strong></a> 
             
             </div> 
         </div>

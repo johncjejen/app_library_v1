@@ -30,7 +30,9 @@
             <div id="templatemo_content">
                 <div id="templatemo_content_right">
                     <% if !@copy_book_details.blank? %>
-                        <h2 class="h2_class"><%=@copy_book_details.first.title.upcase%></h2>
+                        <div class="title_center">
+                            <h2 class="h2_class"><%=@copy_book_details.first.title.upcase%></h2>
+                        </div>
                         <% @copy_book_details.each do |copy_book_detail| %>
                             <div class="templatemo_product_box_detail">
                                 <table>
@@ -48,8 +50,8 @@
             <a href="/" id="back_btn" style="text-decoration:none; text-align:center">Back</a>
             
             <div id="templatemo_footer">
-                <a href="subpage.html">Development on Ruby on Rails</a> | 
-                Copyright © 2022 <a href="#"><strong>John Jejen</strong></a> 
+                <a href="/">Development on Ruby on Rails</a> | 
+                Copyright © 2022 <a href="https://linkedin.com/in/ing-john-carlos-jejen-corredor/"><strong>John Jejen</strong></a> 
             </div> 
         </div>
     </body>

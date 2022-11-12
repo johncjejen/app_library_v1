@@ -22,8 +22,24 @@ h1{
 .h2_class{
 	text-align: center;
 	font-size: 50px;
-	font-family:Helvetica;
-	color: 	#0e043e;
+}
+
+.title_center{
+	border-radius: 40px;
+	color: #f4f8f9;
+	background-color:  #dfba69;
+	width: 400px;
+	justify-items: center;
+	margin:0px auto;
+}
+
+.subtitle_center{
+	border-radius: 40px;
+	color: #f4f8f9;
+	background-color:  #33cc77;
+	width: 400px;
+	justify-items: center;
+	margin:0px auto;
 }
 
 #font_create{
@@ -43,6 +59,20 @@ h1{
 
 #back_btn:hover{
 	box-shadow: 3px 8px 8px #496de1;
+}
+
+#back_btn_new{
+	background-color: #495459;
+	color: white;
+	height: 50px;
+	width: 140px;
+	margin: 20px;
+	font-size: 35px;
+	border-radius: 20px;
+}
+
+#back_btn_new:hover{
+	box-shadow: 3px 8px 8px #fa091d;
 }
 
 #create_btn{
@@ -100,7 +130,7 @@ svg {
 
 .button:focus,
 .button:hover {
-	background-color: #28ad63;
+	background-color: #33cc77;
 }
 
 /* ---------- ICONS ---------- */
@@ -225,7 +255,7 @@ img {
 	color: white;
 	text-align: center;
 	text-decoration: none;
-	background-color: #28ad63;
+	background-color: #33cc77;
 	border-radius: 5px;
 	margin: 15px 20px;
 	transition: 0.5s;
@@ -235,7 +265,7 @@ img {
 #templatemo_menu ul li a:hover{
 	color: white;
 	text-decoration: dotted;
-	background-color: #dfba69;;
+	background-color: #dfba69;
 	border-radius: 5px;
 	transform: scale(1.1,1.1)
 }
@@ -412,7 +442,7 @@ table {
   }
 
   .button_borrow{
-	background-color: #28ad63;
+	background-color: #33cc77;
 	height: 40px;
 	color:white;
 	font-size: 20px;
@@ -426,7 +456,7 @@ table {
   }
 
   .send_borrow{
-	background-color: #28ad63;
+	background-color: #33cc77;
 	height: 40px;
 	color:white;
 	font-size: 20px;
@@ -443,7 +473,7 @@ table {
   }
 
   .return_book{
-	background-color: #28ad63;
+	background-color: #33cc77;
 	height: 40px;
 	color:white;
 	font-size: 20px;
