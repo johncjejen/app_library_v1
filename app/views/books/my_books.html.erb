@@ -38,7 +38,7 @@
                                     <tr><th class="title_book_table" scope="row" colspan="2"><%=my_book.book.title.upcase%></th></tr>
                                     <tr><th class="title_detail_table" scope="row" colspan="2">Copy #<%=my_book.copy_number%></th></tr>
                                     <% if my_book.status == 'borrowed'%>
-                                        <tr><th class="button_borrow" scope="row" colspan="2"><a href="/return_book/<%= my_book.id%>" class="send_borrow" style="text-decoration : none; color:white; width:100px" >Return</a></th></tr>
+                                        <tr><th scope="row" colspan="2"><a href="/return_book/<%= my_book.id%>" class="button_borrow" style="text-decoration : none; color:white; width:100px" ><button class="return_book">Return</button></a></th></tr>
                                     <% else %>
                                         <tr><td>Return Date</td>
                                         <td><%=my_book.return_date%></tr></td>

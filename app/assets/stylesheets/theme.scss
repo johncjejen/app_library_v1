@@ -355,7 +355,7 @@ img {
 #templatemo_content_right .templatemo_product_box_history {
 	display:inline-block;
 	width: 405px;
-	height: 350px;
+	height: 380px;
 	padding: 10px;
 	background-color: #ebe6ec;
 	border-radius: 15px;
@@ -430,7 +430,33 @@ table {
 	height: 40px;
 	color:white;
 	font-size: 20px;
+	width: 450px;
+	border-radius: 70px;
+	text-align: center;
 	cursor: pointer;
+	text-decoration : none;
+	transition: 0.5s;
+  }
+
+  .send_borrow:hover{
+	transform:scale(1.1,1.1)
+  }
+
+  .return_book{
+	background-color: #28ad63;
+	height: 40px;
+	color:white;
+	font-size: 20px;
+	width: 380px;
+	border-radius: 70px;
+	text-align: center;
+	cursor: pointer;
+	text-decoration : none;
+	transition: 0.5s;
+  }
+
+  .return_book:hover{
+	transform:scale(1.1,1.1)
   }
 
   .no_copies{
@@ -438,6 +464,14 @@ table {
 	height: 40px;
 	color:white;
 	font-size: 20px;
+	color:white;
+	font-size: 20px;
+	width: 450px;
+	border-radius: 70px;
+	text-align: center;
+	cursor: pointer;
+	text-decoration : none;
+	
   }
 
 /* end of content */

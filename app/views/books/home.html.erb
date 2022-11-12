@@ -35,34 +35,34 @@
                         <div class="templatemo_product_box">
                             <table>
                                 <tr><th class="title_book_table" scope="row" colspan="2"><%=book.title.upcase%></th></tr>
-                                
+                            </table> 
                                 <span>
                                     <% if book.copies< 1%>
-                                        <tr><th class="no_copies" scope="row" colspan="2"> <input type="submit"  value="Borrow" disabled class="no_copies"> </th></tr>
+                                        <a href="/" class="send_borrow"><button disabled class="no_copies">Borrow</button></a>
                                     <%else%>
                                         <% if current_user %>
                                             <% if current_user.admin? %>
-                                               <tr><th class="no_copies" scope="row" colspan="2"> <input type="submit"  value="Borrow" disabled class="no_copies"> </th></tr>
+                                               <a href="/" class="send_borrow"><button disabled class="no_copies">Borrow</button></a>
                                             <% else %>
-                                                <tr><th class="button_borrow" scope="row" colspan="2"><a href="/borrow_book/<%=book.id%>" class="send_borrow" style="text-decoration : none; color:white; width:100px" >Borrow</a></th></tr>
+                                                <a href="/borrow_book/<%=book.id%>" class="send_borrow"><button class="send_borrow">Borrow</button></a>
                                              <% end %>
                                         <% else %>
-                                            <tr> <th class="button_borrow" scope="row" colspan="2"><a href="/users/sign_in" style="text-decoration : none; color:white;">Borrow</a></th></tr>
+                                            <a href="/users/sign_in" class="send_borrow"><button class="send_borrow">Borrow</button></a>
                                         <%end%>
                                     <%end%>
-                        
+                            <table>
                                 <tr><td>Author:</td>
-                                <td><%=book.author? ? book.author : 'No information'%></tr></td>
+                                <td><%=book.author? ? book.author : 'No information'%></td></tr>
                                 <tr><td>Genre:</td>
-                                <td><%=book.genre.capitalize%></tr></td>
+                                <td><%=book.genre.capitalize%></td></tr>
                                 <tr><td>Subgenre:</td>
-                                <td><%=book.subgenre.capitalize%></tr></td>
+                                <td><%=book.subgenre.capitalize%></td></tr>
                                 <tr><td>Pages:</td>
-                                <td><%=book.pages%></tr></td>
+                                <td><%=book.pages%></td></tr>
                                 <tr><td>Publisher:</td>
-                                <td><%=book.publisher? ? book.publisher : 'No information'%></tr></td>
+                                <td><%=book.publisher? ? book.publisher : 'No information'%></td></tr>
                                 <tr><td>Available Copies:</td>
-                                <td><%=book.copies%></tr></td>
+                                <td><%=book.copies%></td></tr>
                             </table>
                             <% if current_user %>
                             <h3><%= link_to "Book details", "book_detail/#{book.id}",:style=>'text-decoration : none' %></h3>
