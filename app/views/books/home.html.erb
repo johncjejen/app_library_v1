@@ -36,7 +36,6 @@
                             <table>
                                 <tr><th class="title_book_table" scope="row" colspan="2"><%=book.title.upcase%></th></tr>
                                 
-                                <%= form_tag({:controller => "books", :action => "borrow_book"},:method => "post", :multipart => true, :class =>'', data: { turbo: false }) do %>
                                 <span>
                                     <% if book.copies< 1%>
                                         <tr><th class="no_copies" scope="row" colspan="2"> <input type="submit"  value="Borrow" disabled class="no_copies"> </th></tr>
@@ -45,14 +44,12 @@
                                             <% if current_user.admin? %>
                                                <tr><th class="no_copies" scope="row" colspan="2"> <input type="submit"  value="Borrow" disabled class="no_copies"> </th></tr>
                                             <% else %>
-                                                <input type="hidden" name="book_id" value ="<%= book.id%>" >
-                                                <tr><th class="button_borrow" scope="row" colspan="2"> <input type="submit"  value="Borrow" class="send_borrow"> </th></tr>
+                                                <tr><th class="button_borrow" scope="row" colspan="2"><a href="/borrow_book/<%=book.id%>" class="send_borrow" style="text-decoration : none; color:white; width:100px" >Borrow</a></th></tr>
                                              <% end %>
                                         <% else %>
                                             <tr> <th class="button_borrow" scope="row" colspan="2"><a href="/users/sign_in" style="text-decoration : none; color:white;">Borrow</a></th></tr>
                                         <%end%>
                                     <%end%>
-                                <%end%>
                         
                                 <tr><td>Author:</td>
                                 <td><%=book.author? ? book.author : 'No information'%></tr></td>

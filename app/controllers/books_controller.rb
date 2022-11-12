@@ -153,7 +153,7 @@ class BooksController < ApplicationController
 
   def borrow_book
 
-    book_id = params[:book_id]
+    book_id = params[:id]
 
     copies_borrow = CopyBook.where('deactived_copy = 0 and copy_status = 0 and books_id=?',book_id ).first
 
