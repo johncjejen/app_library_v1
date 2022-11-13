@@ -1,11 +1,11 @@
 class BooksController < ApplicationController
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :authenticate_user!, except:[:home]
-  before_action :authenticate_admin!, only:[:create_book, :create_book_csv, :edit_book ]
+  before_action :authenticate_admin!, only:[:create_book, :create_book_csv, :edit_book, :delete_book ]
   
   def home
    
-    @books = Book.all.order('title')
+    @books = Book.where('activated = 1').order('title')
 
     if params[:title].present?
       @books= @books.where("title ILIKE ?", "%#{params[:title]}%")
@@ -153,8 +153,19 @@ class BooksController < ApplicationController
 
   def edit_book
     book_id=params[:id]
-    @books = Book.find(book_id) if !book_id.blank?
+    @books = Book.find(book_id)
     @copies_edit_book = CopyBook.where('books_id=? and copy_books.deactived_copy = 0',book_id).count
+  end
+
+  def delete_book
+
+    book_id=params[:id]
+    @book_delete = Book.find(book_id)
+    @book_delete.activated = 0
+    @book_delete.save
+
+    redirect_to '/', notice: "Book deleted"
+    
   end
 
   def borrow_book

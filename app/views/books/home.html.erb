@@ -77,7 +77,7 @@
                             <h3><%= link_to "Book details", "book_detail/#{book.id}",:style=>'text-decoration : none' %></h3>
                                 <% if current_user.admin? %>
                                     <h3><%= link_to "Edit", "edit_book/#{book.id}",:style=>'text-decoration : none' %></h3>
-                                    
+                                    <h3><%= link_to "Delete", "delete_book/#{book.id}",  data: { turbo_confirm: 'Are you sure?'}, :style=>'text-decoration : none'%></h3>
                                 <%end%>
                             <%end%>
                         </div>
