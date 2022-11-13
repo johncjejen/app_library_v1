@@ -22,17 +22,24 @@
                         <li><%= link_to "Login", new_user_session_path %></li>
                     <% end %>
                 </ul>
-            </div> <!-- end of menu -->
+            </div> 
     
             <div id="templatemo_header">
                
-            </div> <!-- end of header -->
+            </div> 
               <h1>Books List</h1>
             <div id="templatemo_content">
                 <div id="templatemo_content_right">
                     <div class="subtitle_center">
                         <h2 class="h2_class"><%= flash[:notice] %><h2>
                     </div>
+                    <div >
+                        <%= form_tag({:controller => "books", :action => "home"},:method => "get", :multipart => true, :class =>'') do %>
+                            <%= text_field_tag :title, params[:title], class: "search", placeholder: "  Title" %>
+                            <%= submit_tag "Search", name: nil, class: "btn_search" %>
+                        <% end %>
+                    </div>
+                    
                     <% @books.each do |book| %>
                         <div class="templatemo_product_box">
                             <table>

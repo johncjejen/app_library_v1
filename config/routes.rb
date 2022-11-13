@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     #post :borrow_book
     get :my_books
     post :overdue_book
+    get :home
 
   end
 

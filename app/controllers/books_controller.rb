@@ -4,7 +4,13 @@ class BooksController < ApplicationController
   before_action :authenticate_admin!, only:[:create_book, :create_book_csv, :edit_book ]
   
   def home
+   
     @books = Book.all.order('title')
+
+    if params[:title].present?
+      @books= @books.where("title ILIKE ?", "%#{params[:title]}%")
+    end
+
   end
 
   def create_book
