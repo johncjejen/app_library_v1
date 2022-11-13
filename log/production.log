@@ -50,3 +50,23 @@ I, [2022-11-13T13:01:09.470804 #6073]  INFO -- : [475df789-35dc-423f-b593-8a7698
 F, [2022-11-13T13:01:09.471405 #6073] FATAL -- : [475df789-35dc-423f-b593-8a769823dd5f]   
 [475df789-35dc-423f-b593-8a769823dd5f] ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
 [475df789-35dc-423f-b593-8a769823dd5f]   
+I, [2022-11-13T14:20:03.076671 #12346]  INFO -- : [cff13722-47a9-4312-af16-db1eab70690e] Started GET "/" for 127.0.0.1 at 2022-11-13 14:20:03 -0500
+I, [2022-11-13T14:20:03.078660 #12346]  INFO -- : [cff13722-47a9-4312-af16-db1eab70690e] Processing by BooksController#home as HTML
+I, [2022-11-13T14:20:03.085895 #12346]  INFO -- : [cff13722-47a9-4312-af16-db1eab70690e] Completed 500 Internal Server Error in 7ms (Allocations: 1659)
+F, [2022-11-13T14:20:03.087370 #12346] FATAL -- : [cff13722-47a9-4312-af16-db1eab70690e]   
+[cff13722-47a9-4312-af16-db1eab70690e] ActiveRecord::DatabaseConnectionError (There is an issue connecting to your database with your username/password, username: myapp.
+
+Please check your database configuration to ensure the username/password are valid.
+):
+[cff13722-47a9-4312-af16-db1eab70690e]   
+[cff13722-47a9-4312-af16-db1eab70690e] app/controllers/books_controller.rb:8:in `home'
+I, [2022-11-13T14:20:12.776382 #12346]  INFO -- : [749028cc-45be-4b6d-a92c-2cc9263d6e4f] Started GET "/" for 127.0.0.1 at 2022-11-13 14:20:12 -0500
+I, [2022-11-13T14:20:12.777310 #12346]  INFO -- : [749028cc-45be-4b6d-a92c-2cc9263d6e4f] Processing by BooksController#home as HTML
+I, [2022-11-13T14:20:12.783099 #12346]  INFO -- : [749028cc-45be-4b6d-a92c-2cc9263d6e4f] Completed 500 Internal Server Error in 6ms (Allocations: 989)
+F, [2022-11-13T14:20:12.784573 #12346] FATAL -- : [749028cc-45be-4b6d-a92c-2cc9263d6e4f]   
+[749028cc-45be-4b6d-a92c-2cc9263d6e4f] ActiveRecord::DatabaseConnectionError (There is an issue connecting to your database with your username/password, username: myapp.
+
+Please check your database configuration to ensure the username/password are valid.
+):
+[749028cc-45be-4b6d-a92c-2cc9263d6e4f]   
+[749028cc-45be-4b6d-a92c-2cc9263d6e4f] app/controllers/books_controller.rb:8:in `home'
